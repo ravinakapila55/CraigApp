@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar"
+            android:animateLayoutChanges="true" />
+
+        <View
+            android:layout_above="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_grey"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_bar"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/navigation"
+            android:background="@color/light_greys"
+         />
+    </RelativeLayout>
+
+</RelativeLayout>

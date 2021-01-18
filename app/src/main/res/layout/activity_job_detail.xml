@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_greys"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <include layout="@layout/common_header"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp">
+
+                <RelativeLayout
+                android:id="@+id/rel_profile_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/app_color"
+                    app:civ_border_width="@dimen/_1sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toLeftOf="@+id/iv_chat"
+                    android:layout_toRightOf="@id/img_profile"
+                    android:orientation="vertical">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="lorem lpsum"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <com.helper.Helper2Go.custom.CustomTextViewRegular
+                        android:id="@+id/txt_short_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_name"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="lorem lpsum is simply dummy."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_chat"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_message"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+
+            </RelativeLayout>
+            <com.helper.Helper2Go.custom.CustomTextViewRegular
+                android:id="@+id/txt_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_profile_header"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="12m"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginLeft="@dimen/_70sdp"/>
+
+            <com.helper.Helper2Go.custom.CustomTextViewRegular
+                android:id="@+id/txt_long_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_duration"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="visible"
+                android:background="@drawable/gray_background_stroke"
+                android:maxLines="14"
+                android:text="@string/lo"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:background="@drawable/gray_background_stroke"
+                android:layout_below="@+id/txt_long_des">
+
+                <TextView
+                    android:id="@+id/tvAddressLabel"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/addresss"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_50sdp"
+                    android:text="IT Park Chandigarh, IT Park Road, Phase - I, Manimajra, Panchkula, Haryana, India"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toRightOf="@+id/tvAddressLabel"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                    android:id="@+id/tvNoApplicant"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                    android:text="@string/no_of_applicant"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvApplicant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_110sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                    android:text="12-50"
+                    android:textStyle="normal"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvNoApplicant"
+                    android:padding="@dimen/_3sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvBudegetLabel"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNoApplicant"
+                    android:text="@string/budgett"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvBudget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/tvBudegetLabel"
+                    android:layout_marginRight="@dimen/_115sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNoApplicant"
+                    android:text="$ 45"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    />
+
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/llLebl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:layout_below="@+id/cc"
+                android:layout_marginTop="@dimen/_15sdp">
+                <com.helper.Helper2Go.custom.CustomTextViewRegular
+                    android:id="@+id/tvExperienceLabel"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/experience"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <com.helper.Helper2Go.custom.CustomTextViewRegular
+                    android:id="@+id/tvToolsLbel"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tools"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_below="@+id/llLebl"
+                android:layout_marginTop="@dimen/_15sdp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view_skills"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view_tools"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_header" />
+
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/light_greys"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10ssp"
+                    android:orientation="horizontal">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.helper.Helper2Go.custom.CustomTextViewRegular
+                        android:id="@+id/txt_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="ABC124567889HGFH"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10ssp"
+                    android:orientation="horizontal">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.helper.Helper2Go.custom.CustomTextViewRegular
+                        android:id="@+id/txt_order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="Lorem lpsum amet"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/rounded_et_with_shadow"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_price"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/price" />
+
+            <com.helper.Helper2Go.custom.CustomEditTextRegular
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/img_price"
+                android:background="@null"
+                android:hint="@string/enter_budget"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="7"
+                android:maxLines="1"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_experience"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/rounded_et_with_shadow"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_experience"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:src="@drawable/price" />
+
+            <com.helper.Helper2Go.custom.CustomEditTextRegular
+                android:id="@+id/edt_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/img_experience"
+                android:background="@null"
+                android:hint="Enter Your Experience"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="3"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_tools"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/rounded_et_with_shadow"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_tools"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:src="@drawable/price" />
+
+            <com.helper.Helper2Go.custom.CustomEditTextRegular
+                android:id="@+id/edt_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/img_tools"
+                android:background="@null"
+                android:hint="Enter Your Tools"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="3"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </RelativeLayout>
+
+
+        <com.helper.Helper2Go.custom.CustomTextViewBold
+            android:id="@+id/tvOtherInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_gender"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="@string/other_info"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_other"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_below="@id/txt_into"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/rounded_et_with_shadow"
+            android:clickable="true"
+            android:padding="@dimen/_10sdp">
+
+                <ImageView
+                android:id="@+id/img_other"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/user"
+                android:visibility="gone" />
+
+            <com.helper.Helper2Go.custom.CustomEditTextRegular
+                android:id="@+id/edt_other"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/img_other"
+                android:background="@null"
+                android:gravity="left|top"
+                android:maxLength="100"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+
+
+        <com.helper.Helper2Go.custom.CustomTextViewBold
+            android:id="@+id/txt_into"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_gender"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="@string/offer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_intro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_below="@id/txt_into"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/rounded_et_with_shadow"
+            android:clickable="true"
+            android:padding="@dimen/_10sdp">
+
+                 <ImageView
+                android:id="@+id/img_intro"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/user"
+                android:visibility="gone" />
+
+            <com.helper.Helper2Go.custom.CustomEditTextRegular
+                android:id="@+id/edt_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/img_intro"
+                android:background="@null"
+                android:gravity="left|top"
+                android:maxLength="250"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:maxLines="5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+
+        <com.helper.Helper2Go.custom.CustomCheckboxTextRegular
+            android:id="@+id/checkbox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:button="@drawable/custom_checkbox"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="@string/i_accept_the_order"
+            android:textSize="@dimen/_11ssp" />
+
+        <com.helper.Helper2Go.custom.CustomCheckboxTextRegular
+            android:id="@+id/checkbox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:button="@drawable/custom_checkbox"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="@string/want_more_payment"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_apply"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/yellow_button_with_radius"
+        android:gravity="center">
+
+        <com.helper.Helper2Go.custom.CustomTextViewBold
+            android:id="@+id/tv_scan_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:text="@string/send_offer"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

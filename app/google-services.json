@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "874827215117",
+    "firebase_url": "https://helper-2-go.firebaseio.com",
+    "project_id": "helper-2-go",
+    "storage_bucket": "helper-2-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874827215117:android:7a1d37bd4778e66fb94044",
+        "android_client_info": {
+          "package_name": "com.helper.Helper2Go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874827215117-epeo2kvqfkid0tfrmshn2b367c3omsd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helper.Helper2Go",
+            "certificate_hash": "a60044788c343ee9c73760d35a7eef4bfa75f35b"
+          }
+        },
+        {
+          "client_id": "874827215117-n58ko2cq6lq8f7vdpqotmo7fcv28oho2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helper.Helper2Go",
+            "certificate_hash": "9c2cfda1ea8e83366097ff55e9e83d6fe0cddeaa"
+          }
+        },
+        {
+          "client_id": "874827215117-ada90esi38ruicl0a9tbhooe8ac3hlei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtGBo45Z4ZAOK7xmJysX1bRR22llDZ2pI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874827215117-ada90esi38ruicl0a9tbhooe8ac3hlei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_7sdp"
+    android:background="@color/white">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp">
+
+        <com.helper.Helper2Go.custom.CustomTextViewSemiBold
+            android:id="@+id/txt_job_title"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:text="My Jobs kdfj fkdlflks fkfldk jfehjerhfgrhygrj"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:singleLine="true"/>
+
+
+        <com.helper.Helper2Go.custom.CustomTextViewSemiBold
+            android:id="@+id/tvSeeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_details"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:src="@drawable/comment"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_alignParentRight="true"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

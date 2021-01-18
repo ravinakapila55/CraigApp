@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/cross"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="visible">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_job_duration"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.CustomTextViewRegular
+                            android:id="@+id/edt_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textSize="@dimen/_12ssp"
+                            android:padding="@dimen/_7sdp"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rel_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.MySpinner
+                            android:id="@+id/spinner_job_duration"
+                            style="@style/mySpinnerItemStyleForper"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/transparent"
+                            android:drawSelectorOnTop="true"
+                            android:ellipsize="end"
+                            android:overlapAnchor="false"
+                            android:singleLine="true"
+                            android:spinnerMode="dropdown"
+                            android:text="fjjkf"
+                            android:textColor="@color/forgot_grey"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/iv_drop_device"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/drop_down"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_2sdp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="visible">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/end_job_duration"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.CustomTextViewRegular
+                            android:id="@+id/edt_end_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textSize="@dimen/_12ssp"
+                            android:padding="@dimen/_7sdp"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rel_device_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.MySpinner
+                            android:id="@+id/spinner_job_duration_end"
+                            style="@style/mySpinnerItemStyleForper"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/transparent"
+                            android:drawSelectorOnTop="true"
+                            android:ellipsize="end"
+                            android:overlapAnchor="false"
+                            android:singleLine="true"
+                            android:spinnerMode="dropdown"
+                            android:text="fjjkf"
+                            android:textColor="@color/forgot_grey"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/iv_drop_device_end"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/drop_down"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_2sdp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_skill"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.MySpinner
+                            android:id="@+id/spinner_skills"
+                            style="@style/mySpinnerItemStyleForper"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/transparent"
+                            android:drawSelectorOnTop="true"
+                            android:ellipsize="end"
+                            android:overlapAnchor="false"
+                            android:singleLine="true"
+                            android:spinnerMode="dropdown"
+                            android:text="fjjkf"
+                            android:textColor="@color/forgot_grey"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/drop_down"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_2sdp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_tool"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.MySpinner
+                            android:id="@+id/spinner_select_tools"
+                            style="@style/mySpinnerItemStyleForper"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/transparent"
+                            android:drawSelectorOnTop="true"
+                            android:ellipsize="end"
+                            android:overlapAnchor="false"
+                            android:singleLine="true"
+                            android:spinnerMode="dropdown"
+                            android:text="fjjkf"
+                            android:textColor="@color/forgot_grey"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/drop_down"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_2sdp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/txt_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_min_distance"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                       <com.helper.Helper2Go.custom.CustomEditTextRegular
+                           android:id="@+id/edt_distance"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:textSize="@dimen/_12ssp"
+                           android:inputType="number"
+                           android:padding="@dimen/_7sdp"
+                           android:maxLength="4" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/txt_max_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_max_distance"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/outlined_border"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <com.helper.Helper2Go.custom.CustomEditTextRegular
+                            android:id="@+id/edt_max_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textSize="@dimen/_12ssp"
+                            android:inputType="number"
+                            android:padding="@dimen/_7sdp"
+                            android:maxLength="4" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/rel_apply"
+                    android:background="@drawable/yellow_button_with_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/tv_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:text="@string/apply_filter"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

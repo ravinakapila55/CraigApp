@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/home_head">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+            <ImageView
+                android:id="@+id/iv_filter"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/filter"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <com.helper.Helper2Go.custom.CustomTextViewBold
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:layout_centerInParent="true" />
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/bell"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/header"
+        android:id="@+id/iv_redar">
+
+        <ImageView
+            android:id="@+id/mImgRadarBack"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_240sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/redar" />
+
+        <com.tristate.radarview.RadarViewC
+            android:id="@+id/mRadarCustom"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <com.helper.Helper2Go.custom.CustomButtonTextRegular
+        android:id="@+id/tvDistanceSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        android:background="@drawable/yellow_button_without_radius"
+        android:layout_below="@id/iv_redar"
+        android:layout_margin="@dimen/_15sdp"
+        android:text="0-50 KM"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fab_but_home"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/fabs"
+        android:elevation="@dimen/_4sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"/>
+
+</RelativeLayout>

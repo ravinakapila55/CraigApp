@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_7sdp"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.helper.Helper2Go.custom.CustomTextViewSemiBold
+            android:id="@+id/txt_job_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_jobsss"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/iv_accept_job"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:src="@drawable/tick"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_reject_job"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:src="@drawable/reject"
+            android:layout_toLeftOf="@+id/iv_accept_job"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+
+        <com.helper.Helper2Go.custom.CustomTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_offer_status"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_toLeftOf="@id/iv_reject_job"
+            android:text="Accepted"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"/>
+
+
+        <ImageView
+            android:id="@+id/iv_complete"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:src="@drawable/tick"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_toLeftOf="@id/ll_see_job_details"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_see_job_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_toLeftOf="@id/txt_offer_status"
+            android:orientation="horizontal">
+
+            <com.helper.Helper2Go.custom.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <ImageView
+                android:id="@+id/iv_see_job_details"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/comment" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/home_bg">
+
+            <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/filter"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:visibility="visible"/>
+
+        <com.helper.Helper2Go.custom.CustomTextViewBold
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            android:layout_centerInParent="true" />
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/bell"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <com.helper.Helper2Go.custom.CustomEditTextRegular
+        android:layout_below="@+id/header"
+        android:layout_marginTop="@dimen/_15sdp"
+        style="@style/edt_search"
+        android:id="@+id/edt_Search"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_18sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edt_Search"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:visibility="gone"/>
+
+    <com.helper.Helper2Go.custom.CustomTextViewBold
+        android:visibility="gone"
+        android:id="@+id/txt_no_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_job_available"
+        android:layout_below="@+id/recycler_view_search"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/app_color"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fab_but_home"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/fab_home"
+        android:elevation="@dimen/_4sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"/>
+
+</RelativeLayout>

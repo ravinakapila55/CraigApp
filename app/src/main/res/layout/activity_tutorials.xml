@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_tutorials"
+    android:background="@color/white">
+
+    <androidx.viewpager.widget.ViewPager
+    android:id="@+id/view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+
+    <ImageView
+    android:id="@+id/btn_next"
+    android:layout_width="@dimen/_35sdp"
+    android:layout_height="@dimen/_35sdp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/_30sdp"
+    android:src="@drawable/yellow_right_arrow"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:layout_marginRight="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_50sdp"/>
+
+    <LinearLayout
+    android:id="@+id/layoutDots"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_25sdp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:orientation="horizontal"/>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_above="@id/layoutDots"
+    android:alpha=".5"
+    android:background="@color/app_color"
+    android:visibility="gone" />
+
+
+   </RelativeLayout>

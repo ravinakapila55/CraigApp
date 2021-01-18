@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+
+<resources>
+
+    <string name="app_name">Helper 2 Go</string>
+
+    <string name="lorem">Lorem ipsum dolor sitzen amet, consectetur adipiscing elit, sed do eiusmod</string>
+
+    <string name="lorem_title">Lorem ipsum</string>
+
+    <string name="welcome">Herzlich willkommen</string>
+
+    <string name="sign_in_to_continue">Melden Sie sich an, um fortzufahren</string>
+
+    <string name="email_address">E-Mail-Addresse</string>
+
+    <string name="forgot_passwords">Passwort vergessen?</string>
+
+    <string name="forgot_password">Passwort vergessen</string>
+
+    <string name="login">Anmeldung</string>
+
+    <string name="or">ODER</string>
+
+    <string name="have_an_account">Hast du schon einen Account?</string>
+
+    <string name="sign_UP">Anmelden</string>
+
+    <string name="sign_up">Anmelden</string>
+
+    <string name="fill_below_details">Füllen Sie die folgenden Details aus und schließen Sie sich uns an.</string>
+
+    <string name="full_name">Vollständiger Name</string>
+
+    <string name="contact">Kontakt-Nr</string>
+
+    <string name="dont_have_an_account">Sie haben noch kein Konto?</string>
+
+    <string name="sign_in">Anmelden</string>
+
+    <string name="email_not_empty">E-Mail darf nicht leer sein</string>
+
+    <string name="name_not_empty">Der Name darf nicht leer sein</string>
+
+    <string name="contact_not_empty">Kontakt Nr. Kann nicht leer sein</string>
+
+    <string name="contact_not_invalid">Die Kontaktnummer muss mindestens 8 und maximal 12 Stellen haben.</string>
+
+    <string name="confirm_password_not_empty">Bestätigen Sie, dass das Passwort nicht leer sein darf</string>
+
+    <string name="invalidEmail">bitte eine gültige E-Mail-Adresse eintragen</string>
+
+    <string name="invalidName">Der vollständige Name sollte nur aus Zeichen bestehen.</string>
+
+    <string name="password_cannot_be_empty">Passwort kann nicht leer sein</string>
+
+    <string name="password">Passwort</string>
+
+    <string name="confirm_password">Kennwort bestätigen</string>
+
+    <string name="password_missmatch">Passwort und Passwort bestätigen müssen identisch sein</string>
+
+<!--    <string name="home">Zuhause</string>-->
+    <string name="home">Startseite</string>
+
+    <string name="title_home">Startseite</string>
+
+    <string name="title_profile">Profil</string>
+
+    <string name="title_search">Suchen</string>
+
+    <string name="title_admin">Administratorin</string>
+
+<!--    <string name="title_settings">die Einstellungen</string>-->
+    <string name="title_settings">Einstellungen</string>
+    <string name="accept_term_cond">Please agree to the terms &amp; conditions.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+
+    <string name="name">Name</string>
+
+    <string name="service_looking_for">Service auf der Suche</string>
+
+    <string name="gender">Geschlecht</string>
+
+    <string name="save">sparen</string>
+
+    <string name="duration">Dauer</string>
+
+    <string name="distance">Entfernung</string>
+
+    <string name="job_duration">Arbeitsdauer</string>
+
+<!--    <string name="skills">Kompetenzen</string>-->
+    <string name="skills">Erfahrung</string>
+
+    <string name="notifications">Benachrichtigung</string>
+
+    <string name="apply_as_helper">Als Helfer bewerben</string>
+
+
+    <string name="i_accept_the_order">
+
+<![CDATA[Ich akzeptiere die Bestellung, einschliesslich der Bestätigung, dass ich alle nötigen Erfahrungen, Werkzeuge und Respekt mitbringe.]]>
+</string>
+
+    <string name="want_more_payment">Willst du mehr Zahlung und längere Zeit usw.</string>
+
+    <string name="order_number">Bestellnummer:</string>
+
+    <string name="order_name">Bestellname</string>
+
+    <string name="apply">Anwenden</string>
+
+    <string name="send_offer">SENDE ANGEBOT</string>
+
+    <string name="offer">Angebot</string>
+
+    <string name="description">Beschreibung</string>
+
+    <string name="enter_price">Preis eingeben</string>
+
+    <string name="enter_time">Zeit eingeben</string>
+
+    <string name="successfully_apply_for_job">Erfolgreich angewendet \ nFür den Job</string>
+
+    <string name="action_photo">Aktionsfoto</string>
+
+    <string name="action_info">Aktionsinfo</string>
+
+    <string name="loading">Wird geladen...</string>
+
+    <string name="checkInternetConnection">Überprüfen Sie die Internetverbindung</string>
+
+    <string name="send">Senden</string>
+
+    <string name="invalidPhone">Geben Sie eine gültige Telefonnummer ein</string>
+
+    <string name="no_notification_available">Keine Benachrichtigung verfügbar</string>
+
+    <string name="address">Adresse</string>
+
+    <string name="email_phone">E-Mail / Telefonnummer</string>
+
+    <string name="select_duration">Wählen Sie Auftragsdauer</string>
+
+    <string name="select_skill">Wählen Sie Fähigkeit</string>
+
+    <string name="select_tool">Werkzeug auswählen</string>
+
+    <string name="enter_distane">Entfernung eingeben</string>
+
+    <string name="apply_filter">Filter anwenden</string>
+
+    <string name="please_enter_distance">Bitte geben Sie die Entfernung ein</string>
+
+    <string name="edit">Bearbeiten</string>
+
+    <string name="mobile_number_empty">Telefonnummer erforderlich.</string>
+
+    <string name="name_empty">Name erforderlich.</string>
+
+    <string name="intro_empty">Einführung erforderlich.</string>
+
+    <string name="address_empty">Adresse erforderlich.</string>
+
+    <string name="name_no_number">Name akzeptiert keine Nummern.</string>
+
+    <string name="please_select_gender">Bitte wähle ein Geschlecht.</string>
+
+    <string name="update_success">Profil erfolgreich aktualisiert.</string>
+
+<!--    <string name="my_jobs">Administratorin</string>-->
+    <string name="my_jobs">Admin</string>
+
+    <string name="applied">Angewandt</string>
+
+    <string name="completed">Abgeschlossen</string>
+
+    <string name="lo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bei auctor urna nunc id cursus metus aliquam. Turpis tincidunt id aliquet risus. Nisl nunc mi ipsum faucibus vitae aliquet nec. Et maleuada berühmt ac turpis egestas integer. Erat imperdiet sed euismod nisi porta lorem mollis aliquam ut. Proin libero nunc konsequat interdum varius sit amet. Vel pretium lectus quam id leo im Lebenslauf turpis. Dignissim diam quis enim lobortis scelerisque. Vulputate sapien nec sagittis aliquam maleuada bibendum arcu vitae elementum. Porta lorem mollis aliquam ut porttitor leo a. Adipiscing tristique risus nec feugiat im Fermentum. Consectetur adipiscing elit duis tristique sollicitudin nibh. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Eleifend quam adipiscing vitae proin. Tortor vitae purus faucibus ornare suspendisse sed nisi. Nibh praesent tristique magna sitzen amet. Ac tincidunt vitae sempre quis lectus nulla. Montes nascetur lächerliche mus mauris vitae ultricies. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Porta lorem mollis aliquam ut porttitor leo. Faucibus nisl tincidunt eget nullam non nisi. Facilisi nullam vehicula ipsum a arcu cursus.</string>
+
+    <string name="details">Einzelheiten</string>
+
+    <string name="no_job_available">Kein Job verfügbar</string>
+
+    <string name="please_enter_price">Bitte geben Sie den Preis ein</string>
+
+    <string name="please_enter_time">Bitte geben Sie die Zeit ein</string>
+
+    <string name="please_accept_conditions">Bitte akzeptieren Sie Bedingungen</string>
+
+    <string name="yes">Ja</string>
+
+    <string name="no">Nein</string>
+
+    <string name="exit_confirm">Möchten Sie sich abmelden?</string>
+
+    <string name="registered_successfully">Erfolgreich registriert</string>
+
+    <string name="max_distance_is">Die maximale Entfernung beträgt 500</string>
+
+    <string name="no_match_found">Es wurde kein übereinstimmender Datensatz gefunden</string>
+
+    <string name="change_password">Passwort ändern</string>
+
+    <string name="logout">Ausloggen</string>
+
+    <string name="terms_conditions">Begriffe_amp; Bedingungen</string>
+
+    <string name="enterNewPassword">Neues Passwort eingeben</string>
+
+    <string name="new_password">Neues Passwort</string>
+
+    <string name="language">Sprache</string>
+
+    <string name="new_confirm_password">Neu Passwort bestätigen</string>
+
+    <string name="invalidPassword">Das Passwort muss eine Mischung aus 6 bis 20 Zeichen aus Groß- und Kleinbuchstaben sowie Ziffern und einem Sonderzeichen enthalten</string>
+
+    <string name="invalidConfirmPassword">Bestätigen Sie, dass das Passwort eine Mischung aus 6 bis 20 Zeichen aus Groß- und Kleinbuchstaben sowie Ziffern und einem Sonderzeichen enthalten muss</string>
+
+    <string name="change_password_message">Möchten Sie das Passwort wirklich ändern?</string>
+
+    <string name="submit">einreichen</string>
+    <string name="submit_new">Veröffentlichen</string>
+
+    <string name="introduce_yours">Sich vorstellen</string>
+
+    <string name="agreement">Ja, ich stimme der Offenlegung persönlicher Informationen zu</string>
+
+    <string name="accept_term">Bitte stimmen Sie der Offenlegung persönlicher Informationen zu.</string>
+
+    <string name="type_message">Nachricht eingeben</string>
+
+    <!-- <string name="become_a_helper">Become a helper and earn your\nIncome by doing miniJobs.</string>-->
+
+
+    <string name="become_a_helper">Werden Sie ein Helper und verdienen Sie Ihr \ nEinkommen, indem Sie miniJobs machen.</string>
+
+    <!-- <string name="become_a_clinet">Become a client and get your\nminiJobs.</string>-->
+
+
+    <string name="become_a_clinet">Werden Sie Kunde und erledigen Sie Ihren \ nminiJob.</string>
+
+    <string name="looking_for_mini_job">Auf der Suche nach Mini Job</string>
+
+    <string name="helper_to_go">Helper2GO Version 1.1</string>
+
+<!--    <string name="the_first_version_of">Die erste Version von Helper2GO bietet Ihnen die Möglichkeit, Ihren MiniJob als Client zu bewerben oder als Helfer zu verwenden.</string>-->
+    <string name="the_first_version_of">Die erste Version von Helper2GO bietet Ihnen die Möglichkeit, Ihren MiniJob als Client zu bewerben oder als Helfer auszuführen.</string>
+
+    <string name="we_will_add">Wir werden weitere Funktionen für Sie hinzufügen und freuen uns auf Ihr Feedback.</string>
+
+    <string name="go_to_dashboard">Gehen Sie zum Dashboard</string>
+
+    <string name="send_feedback">Feedback abschicken</string>
+
+    <string name="all_jobs">Mini Jobs</string>
+
+    <string name="add_job">Job hinzufügen</string>
+
+    <string name="edit_job">Job bearbeiten</string>
+
+    <string name="job_title">Berufsbezeichnung</string>
+
+    <string name="short_description">kurze Beschreibung</string>
+
+    <string name="long_description">Lange Beschreibung</string>
+
+    <string name="choose_file">Wählen Sie Job Image</string>
+
+    <string name="tools_needed">benötigt Werkzeuge</string>
+
+    <string name="location">Ort</string>
+
+    <string name="price_for_the_job">Preis für den Job</string>
+
+    <string name="location_not_found">Ort nicht gefunden</string>
+
+    <string name="category">Kategorie</string>
+
+    <string name="ok">In Ordnung</string>
+
+    <string name="cancel">Stornieren</string>
+
+    <string name="start_date">Anfangsdatum</string>
+
+    <string name="empty_job_title">Bitte geben Sie die Berufsbezeichnung ein</string>
+
+    <string name="empty_job_short_description">Bitte geben Sie eine kurze Beschreibung ein</string>
+
+    <string name="empty_job_long_description">Bitte geben Sie eine lange Beschreibung ein</string>
+
+    <string name="empty_no_of_applicants">Bitte geben Sie nein ein. von Bewerbern</string>
+
+    <string name="empty_job_start_date">Bitte wählen Sie die Auftragsdauer</string>
+
+    <string name="empty_job_location">Bitte geben Sie den Standort ein</string>
+
+    <string name="empty_job_price">Bitte wählen Sie die Preisspanne</string>
+
+    <string name="empty_job_skills">Bitte geben Sie mindestens eine Fertigkeit ein</string>
+
+    <string name="empty_job_tools">Bitte geben Sie mindestens ein Werkzeug ein</string>
+
+    <string name="empty_job_category">Bitte Kategorie auswählen</string>
+
+    <string name="empty_job_image">Bitte Bild auswählen</string>
+
+    <string name="helper">Helper</string>
+
+    <string name="client">Client</string>
+ <!--
+    <string name="helper">Helferin</string>
+
+    <string name="client">Klientin</string>-->
+
+    <string name="see_details">Siehe Einzelheiten</string>
+
+    <string name="my_job">Meine Jobs</string>
+
+    <string name="inqueries">Anfragen</string>
+
+    <string name="add_new_job">Neuen Job hinzufügen</string>
+
+    <string name="delete_job">Job löschen</string>
+
+    <string name="accept_job">Akzeptieren</string>
+
+    <string name="complete_job">Komplett</string>
+
+    <string name="reject_job">Ablehnen</string>
+
+    <string name="delete_job_message">Möchten Sie diesen Job wirklich löschen?</string>
+
+    <string name="accept_job_message">Möchten Sie diese Anfrage wirklich annehmen?</string>
+
+    <string name="reject_job_message">Möchten Sie diese Anfrage wirklich löschen?</string>
+
+    <string name="complete_job_message">Möchten Sie diese Anfrage wirklich ausführen?</string>
+
+    <string name="no_of_applicants">Anzahl der Bewerber</string>
+
+    <string name="not_updated_any_information">Keine Informationen aktualisiert.</string>
+
+    <string name="job_details">Jobdetails</string>
+
+    <string name="email">Email</string>
+
+    <string name="user_cost">Benutzerkosten</string>
+
+    <string name="user_details">Nutzerdetails</string>
+
+    <string name="payments">Zahlungen</string>
+
+    <string name="facebook_app_id">2652603938373303</string>
+
+    <string name="fb_login_protocol_scheme">fb2652603938373303</string>
+
+    <string name="demo_min_label">Mindest</string>
+
+    <string name="demo_max_label">Max</string>
+
+    <string name="select_job_duration">Wählen Sie Auftragsdauer</string>
+
+    <string name="select_price_range">Wählen Sie Preisspanne</string>
+
+
+<!--    <string name="min_price">Mindestpreis</string>-->
+    <string name="min_price">Min. Preis</string>
+<!--    <string name="max_price">Maximaler Preis</string>-->
+    <string name="max_price">Max. Preis</string>
+    <string name="min_dummy">Min: 1</string>
+    <string name="max_dummy">Max: 100000</string>
+    <string name="enter_budget">Enter Your budget</string>
+    <string name="other_information">Other Information</string>
+    <string name="budget">Budget</string>
+    <string name="offer_detail">Angebot Detail</string>
+    <string name="other_info">Andere Informationen</string>
+    <string name="addresss">Adresse-</string>
+    <string name="no_of_applicant">Anzahl der Antragsteller-</string>
+    <string name="budgett">Budget-</string>
+    <string name="experience">Erfahrung</string>
+<!--    <string name="tools">Werkzeuge</string>-->
+    <string name="tools">Benötigte Werkzeuge</string>
+    <string name="back_view">RÜCKANSICHT</string>
+    <string name="done">Getan</string>
+    <string name="select_2_dates">Wählen Sie 2 Daten</string>
+    <string name="start_job_duration">Wählen Sie Start Job Duration</string>
+    <string name="end_job_duration">Wählen Sie Jobdauer beenden</string>
+    <string name="enter_min_distance">Mindestabstand eingeben (km)</string>
+    <string name="enter_max_distance">Geben Sie die maximale Entfernung (km) ein.</string>
+    <string name="requests">Anfragen</string>
+    <string name="income">Einkommen</string>
+    <string name="no_invoice">Keine Rechnung verfügbar
+</string>
+    <string name="total">Gesamt</string>
+    <string name="job_settings">Jobeinstellungen</string>
+    <string name="front_view">VORDERANSICHT</string>
+    <string name="my_jobsss">Meine Jobs
+</string>
+    <string name="send_feedbackk">Feedback abschicken
+</string>
+    <string name="enter_message">Gib deine Nachricht ein
+</string>
+    <string name="are_u_sure">Gib deine Nachricht ein
+</string>
+    <string name="go_to_dasboard">Gehen Sie zum Dashboard
+</string>
+
+    <string name="search_job">Job suchen
+</string>
+
+
+    <string name="feedback_success_msg">Ihre Nachricht wurde erfolgreich an den Administrator gesendet
+</string>
+
+    <string name="become_a">Etwas werden
+</string>
+
+    <string name="and_earn_your">und verdienen Sie Ihre</string>
+
+    <string name="and_get_your">und hol deine
+</string>
+
+    <string name="minijobs">miniJobs</string>
+
+    <string name="income_by_mini_jobs">Einkommen durch MiniJobs.
+</string>
+
+
+    <!--android: saci.h.khan@gmail.com HalloGoogle1234-->
+
+
+    <!--AAAAvR2id6E:APA91bF1VKmdfRcpW7PNHM5Z0-gMvk3vN6r0joRRvT-CNiT-AcGY51CSAoOIplEShwMwa1x5cWNQ2sOLbgHZ5E5sGV8QlgD5YySynRxsqo4ExPuITAd8x9aHHbrbBJQnN2oje3ohuMlp -->
+
+
+    <!--AAAAvR2id6E:APA91bF1VKmdfRcpW7PNHM5Z0-gMvk3vN6r0joRRvT-CNiT-AcGY51CSAoOIplEShwMwa1x5cWNQ2sOLbgHZ5E5sGV8QlgD5YySynRxsqo4ExPuITAd8x9aHHbrbBJQnN2oje3ohuMlp -->
+
+
+    <!--1. Fb Accpount user:testsingh28@gmail.compass:Testesfera@123 2. Gmail user : testeresfera@gmail.com pass:power#2020 -->
+
+
+    <!--http://178.128.116.149/tinder/api/admin-message?message=sadsas http://178.128.116.149/tinder/api/admin-message?message=sadsas other_info apply-job Url :- 1. get-jobs2. search-jobs end_job_durationcreate-job price_range -->
+
+
+    <!--android: saci.h.khan@gmail.com HalloGoogle1234-->
+
+
+
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tut_one_icon" />
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    >
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_40sdp">
+
+
+                        <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/become_a"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+
+                        <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Helper "
+                        android:textColor="@color/login_button_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@+id/tv1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+
+                        <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/and_earn_your"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toRightOf="@+id/tv2"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+
+                        <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/income_by_mini_jobs"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="normal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/rel_apply_as_helper"
+                        android:background="@drawable/yellow_button_with_radius"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_20sdp">
+
+                        <com.helper.Helper2Go.custom.CustomTextViewBold
+                            android:id="@+id/tv_looking_for_mini_jobs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:imeOptions="actionNext"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:text="@string/looking_for_mini_job"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+</RelativeLayout>

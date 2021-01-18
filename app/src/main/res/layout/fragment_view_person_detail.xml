@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_white">
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.helper.Helper2Go.custom.CustomTextViewRegular
+                            android:id="@+id/tvDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8 days left"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/clock"
+                            android:drawablePadding="@dimen/_5sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textSize="@dimen/_12ssp"/>
+
+
+                        <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/cross"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/profile" />
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/txt_name"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_profile"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:text="lorem lpsum is simply dummy."
+                        android:textSize="@dimen/_15ssp"
+                        android:textColor="@color/black"/>
+
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/home_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="3dp"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_15sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.helper.Helper2Go.custom.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/description"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textSize="@dimen/_12ssp"/>
+
+                            <TextView
+                                android:id="@+id/tvBudget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Budget:120-1200"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textSize="@dimen/_10ssp"/>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.helper.Helper2Go.custom.CustomTextViewRegular
+                            android:id="@+id/txt_long_des"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lorem"
+                            android:textSize="@dimen/_10ssp"/>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:background="@drawable/rounded_et_with_shadow"
+                        android:padding="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <ImageView
+                            android:id="@+id/img_price"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/price" />
+
+                        <com.helper.Helper2Go.custom.CustomEditTextRegular
+                            android:id="@+id/edt_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/img_price"
+                            android:background="@null"
+                            android:hint="Enter Your budget"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:maxLines="1"
+                            android:textSize="@dimen/_11ssp" />
+
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_15sdp">
+                    <com.helper.Helper2Go.custom.CustomTextViewRegular
+                        android:id="@+id/tvExperienceLabel"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/experience"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <com.helper.Helper2Go.custom.CustomTextViewRegular
+                        android:id="@+id/tvToolsLbel"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tools"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/_12sdp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_15sdp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recycler_view_skills"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recycler_view_tools"/>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/rel_apply_as_helper"
+                    android:background="@drawable/yellow_button_with_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/tv_scan_barcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:text="@string/apply_as_helper"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+
+
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="right"
+        android:background="@drawable/dialog_upperview"
+        android:orientation="vertical"
+        android:id="@+id/cross"
+        />
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/are_u_sure"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"/>
+
+
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:id="@+id/save"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/commonbutton_bg"
+        android:layout_marginBottom="10dp"
+
+        android:layout_weight="1"/>
+
+</LinearLayout>

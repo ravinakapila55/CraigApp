@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tut_two_icon" />
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_40sdp">
+
+
+                <TextView
+                    android:id="@+id/tvFrst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/become_a"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                    <TextView
+                    android:id="@+id/tvsecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                        app:layout_constraintLeft_toRightOf="@+id/tvFrst"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Client"
+                    android:textColor="@color/login_button_color"
+                    android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                    <TextView
+                    android:id="@+id/tvThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                    android:gravity="center"
+                        app:layout_constraintLeft_toRightOf="@+id/tvsecond"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/and_get_your"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/minijobs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/rel_apply_as_helper"
+                    android:background="@drawable/yellow_button_with_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_18sdp">
+
+
+                <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/tv_looking_for_mini_jobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:text="Go to Dashboard"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1e3b54</color>
+    <color name="colorPrimaryDark">#1e3b54</color>
+    <color name="colorAccent">#1e3b54</color>
+    <color name="app_color">#1e3b54</color>
+    <color name="white">#ffffff</color>
+    <color name="grey_color">#656565</color>
+    <color name="another_grey">#828282</color>
+
+    <color name="light_grey">#B0B0B0</color>
+    <color name="light_grey3">#DBDBDB</color>
+    <color name="light_greys">#F7F6F6</color>
+    <color name="login_button_color">#edb60b</color>
+    <color name="black">#000000</color>
+
+
+    <color name="card_green">#299b5c</color>
+    <color name="card_yellow">#edb60b</color>
+    <color name="card_red">#ed3041</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_grey">#B9B9B9</color>
+    <color name="grey_color_border">#BFBFBF</color>
+    <color name="forgot_grey">#4c4c4c</color>
+    <color name="polyline_gray">#707072</color>
+    <color name="send_msg_back">#489B9999</color>
+    <color name="offwhite">#F7F5F5</color>
+    <color name="grey">#50BDBBBB</color>
+    <color name="offBlack">#444444</color>
+    <color name="gray_">#C0BEBE</color>
+    <color name="dark_gray">#3D404E</color>
+
+    <array name="array_dot_active">
+        <item>@color/card_yellow</item>
+        <item>@color/card_yellow</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/light_grey</item>
+        <item>@color/light_grey</item>
+    </array>
+</resources>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp">
+        <include layout="@layout/login_signup_header"/>
+
+        <ImageView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+          >
+
+             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1.5"
+            android:layout_gravity="start"
+            >
+
+
+            <com.helper.Helper2Go.custom.CustomTextViewDark
+                android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="@string/welcome"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <com.helper.Helper2Go.custom.CustomTextViewSemiBold
+                android:id="@+id/tvSigninStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="@string/sign_in_to_continue"
+                android:textSize="@dimen/_11sdp" />
+
+             </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_weight="0.5"
+                     android:layout_marginTop="@dimen/_25sdp"
+                     android:layout_marginEnd="@dimen/_5sdp"
+                     >
+
+
+
+
+
+<!--
+                     <com.helper.Helper2Go.custom.MySpinner
+                         android:id="@+id/spLanguage"
+                         android:layout_width="wrap_content"
+                         android:layout_height="@dimen/_30sdp"
+                         android:background="@android:color/transparent"
+                         android:drawSelectorOnTop="true"
+                         android:ellipsize="end"
+                         android:layout_marginTop="@dimen/_15sdp"
+                         android:overlapAnchor="false"
+                         android:singleLine="true"
+                         android:layout_marginLeft="@dimen/_5sdp"
+                         android:spinnerMode="dropdown"
+                         android:text="@string/language"
+                         android:textColor="@color/colorPrimary"
+                         android:textSize="@dimen/_11ssp"
+                         android:visibility="visible" />
+-->
+
+
+                     <Spinner
+                         android:id="@+id/spLanguage"
+                         android:layout_width="@dimen/_120sdp"
+                         android:layout_height="@dimen/_40sdp"
+                         android:layout_gravity="center_horizontal"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:layout_marginLeft="@dimen/_15sdp"
+                         android:layout_marginTop="@dimen/_15sdp"
+                         android:background="@drawable/spinner_bg_new" />
+
+
+
+
+
+
+                 </LinearLayout>
+
+
+
+             </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rel_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/rounded_et_with_shadow"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/img_email"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/email" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/country_code_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:ccp_contentColor="@color/black"
+                    app:ccp_textSize="@dimen/_11ssp"
+                    android:layout_toRightOf="@+id/img_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <com.helper.Helper2Go.custom.CustomEditTextRegular
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/country_code_picker"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:hint="@string/email_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_11ssp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/rounded_et_with_shadow"
+                android:padding="@dimen/_10sdp">
+
+
+                <ImageView
+                    android:id="@+id/img_pass"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/password" />
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/img_pass"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/img_eye"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/eye"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:tint="@color/dark_grey"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/app_button_bg"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.helper.Helper2Go.custom.CustomTextViewBold
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_toRightOf="@+id/btn_login"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/login_btn"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </RelativeLayout>
+
+            <com.helper.Helper2Go.custom.CustomTextViewRegular
+                android:id="@+id/txt_forgot_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/forgot_passwords"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintTop_toBottomOf="@+id/rel_pass" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_25sdp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@+id/rel_g_plus"
+                    android:background="@color/light_grey" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_g_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp">
+
+
+                    <com.helper.Helper2Go.custom.CustomTextViewBold
+                        android:id="@+id/txt_or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/or"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/rel_g_plus"
+                    android:background="@color/light_grey" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:id="@+id/img_fb"
+                    android:src="@drawable/fb" />
+
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:id="@+id/img_google"
+                    android:src="@drawable/google"
+                    android:layout_marginLeft="@dimen/_15sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <com.helper.Helper2Go.custom.CustomTextViewRegular
+                    android:id="@+id/labelll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/dont_have_an_account"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.helper.Helper2Go.custom.CustomTextViewDark
+                    android:id="@+id/txt_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/sign_UP"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

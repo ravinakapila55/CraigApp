@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/app_color">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:tint="@color/white"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_back"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/img_back"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Susan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:id="@+id/tvTitle"/>
+
+</RelativeLayout>

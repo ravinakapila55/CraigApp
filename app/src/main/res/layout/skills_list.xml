@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <com.helper.Helper2Go.custom.CustomCheckboxTextRegular
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:button="@drawable/custom_checkbox"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="@string/i_accept_the_order"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/forgot_grey"/>
+
+
+</RelativeLayout>
