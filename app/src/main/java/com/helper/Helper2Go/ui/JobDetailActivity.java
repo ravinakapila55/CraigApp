@@ -171,17 +171,16 @@ public class JobDetailActivity extends AppCompatActivity
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.placeholder(R.drawable.user_img);
-            Glide.with(JobDetailActivity.this).setDefaultRequestOptions(requestOptions).load(Injector.JOB_IMAGE_URL + jobModelForUserAllJobs.getImage()).into(img_profile);
-
+            Glide.with(JobDetailActivity.this).setDefaultRequestOptions(requestOptions).load(Injector.JOB_IMAGE_URL +
+                    jobModelForUserAllJobs.getImage()).into(img_profile);
         }
         //txt_name
-        else{
+        else {
             Log.e("iddd ",MyJobsFragment.jobModelListForApplied.get(position).getId()+"");
             forUserAllJobs = MyJobsFragment.jobModelListForApplied.get(position);
             iv_chat.setVisibility(View.VISIBLE);
             cc.setVisibility(View.GONE);
             iv_chat.setImageDrawable(getResources().getDrawable(R.drawable.ic_message));
-
 
             Log.e("GetName ",forUserAllJobs.getName());
             Log.e("short ",forUserAllJobs.getShort_desc());
@@ -191,13 +190,11 @@ public class JobDetailActivity extends AppCompatActivity
             txt_short_des.setText(forUserAllJobs.getShort_desc());
             txt_long_des.setText(forUserAllJobs.getLong_desc());
 
-
-
-
             try
             {
                 JSONArray jsonArraySkills = new JSONArray(forUserAllJobs.getSkills_required());
                 Log.e("SkilssArrayLength ",jsonArraySkills.length()+"");
+
                 for(int i = 0; i < jsonArraySkills.length(); i++)
                 {
                     checkBoxListForSkills.add(jsonArraySkills.getString(i));
@@ -205,6 +202,7 @@ public class JobDetailActivity extends AppCompatActivity
 
                 JSONArray jsonArrayTools = new JSONArray(forUserAllJobs.getTools_needed());
                 Log.e("toolsArrayLength ",jsonArrayTools.length()+"");
+
                 for(int i = 0; i < jsonArrayTools.length(); i++)
                 {
                     checkBoxListForTools.add(jsonArrayTools.getString(i));

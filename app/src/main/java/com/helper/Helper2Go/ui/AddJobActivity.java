@@ -1125,7 +1125,6 @@ public class AddJobActivity extends ImagePicker
                     start_date+end_date+edt_location.getText().toString()+edt_no_of_applicants.getText().toString()+etMinPrice.getText().toString()+
                     latt+lngg+etMaxPrice.getText().toString().trim()+"");
 
-
             Log.e("Skills ",selectedSkillsList.toString());
             Log.e("tools ",selectedToolsList.toString());
 

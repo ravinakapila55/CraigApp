@@ -51,7 +51,8 @@ import com.tristate.radarview.LatLongCs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApplyAsHelperActivity extends AppCompatActivity {
+public class ApplyAsHelperActivity extends AppCompatActivity
+{
 
     @BindView(R.id.txt_title)
     TextView txt_title;
@@ -103,13 +104,13 @@ public class ApplyAsHelperActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.iv_back)
-    public void iv_back(){
+    public void iv_back()
+    {
         finish();
     }
 
     @BindView(R.id.edt_experience)
     EditText edt_experience;
-
 
     @BindView(R.id.edt_tools)
     EditText edt_tools;
@@ -219,9 +220,9 @@ public class ApplyAsHelperActivity extends AppCompatActivity {
         jsonObject.addProperty("helper_exp", "test experience");
         jsonObject.addProperty("helper_tools","test tools");
 
-
-/*        jsonObject.addProperty("helper_exp", edt_experience.getText().toString().trim());
-        jsonObject.addProperty("helper_tools", edt_tools.getText().toString().trim());*/
+        /* jsonObject.addProperty("helper_exp", edt_experience.getText().toString().trim());
+       jsonObject.addProperty("helper_tools", edt_tools.getText().toString().trim());
+       */
         Log.e("request....", String.valueOf(jsonObject));
 
         Observable<Response<ResponseBody>> observeApi = apiInterface.applyForJob(jsonObject, "Bearer " + MyApplication.getInstance().useString("user_access_token"))

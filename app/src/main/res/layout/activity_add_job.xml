@@ -78,7 +78,7 @@
                <RelativeLayout
                 android:id="@+id/rel_long_description"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_180sdp"
+                android:layout_height="@dimen/_170sdp"
                 android:layout_marginLeft="@dimen/_2sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginRight="@dimen/_2sdp"
@@ -96,7 +96,7 @@
                  android:hint="@string/long_description"
                  android:inputType="textMultiLine"
                  android:maxLines="10"
-                 android:maxLength="650"
+                 android:maxLength="200"
                  android:textSize="@dimen/_11ssp"/>
 
             </RelativeLayout>

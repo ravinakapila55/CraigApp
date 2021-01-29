@@ -74,6 +74,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -96,7 +99,6 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
     LocationManager mLocationManager;
 
     Location mLocation;
-
 
     boolean isFirst = false;
 
@@ -213,24 +215,33 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
             @Override
             public void onNext(Response<ResponseBody> response)
             {
-
                 Log.e("Data_Loading_Error", String.valueOf(response));
                 GeneralResponse generalResponse = new GeneralResponse(response);
                 Log.e("request....", String.valueOf(generalResponse.response));
+
                 try {
-                    if (generalResponse.checkStatus()) {
-                        if(jobModelList.size() != 0){
+                    if (generalResponse.checkStatus())
+                    {
+                        if(jobModelList.size() != 0)
+                        {
                             jobModelList.clear();
                         }
+
                         jobModelList = generalResponse.getDataAsList("result", JobModel.class);
                         JobFilterParam jobFilterParam = generalResponse.getJSONObjectAs("params", JobFilterParam.class);
-                        if (job_duration.size() != 0) {
+
+                        if (job_duration.size() != 0)
+                        {
                             job_duration.clear();
                         }
-                        if (skills.size() != 0) {
+
+                        if (skills.size() != 0)
+                        {
                             skills.clear();
                         }
-                        if (tools.size() != 0) {
+
+                        if (tools.size() != 0)
+                        {
                             tools.clear();
                         }
 
@@ -241,9 +252,12 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
 
                         int count = 0;
 
-                        for(int i = 0; i < jobModelList.size(); i++){
-                            if(jobModelList.size() > arra.length) {
-                                if (count == arra.length) {
+                        for(int i = 0; i < jobModelList.size(); i++)
+                        {
+                            if(jobModelList.size() > arra.length)
+                            {
+                                if (count == arra.length)
+                                {
                                     count = 0;
                                 }
                             }
@@ -251,26 +265,29 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
                             count++;
                         }
 
-
                         Integer[] new_color_arr = myin.toArray(new Integer[myin.size()]);
                         recycler_view_search.setLayoutManager(new LinearLayoutManager(getContext()));
                         recycler_view_search.setAdapter(new HomeScreenAdapter(getContext(),
-                                new_color_arr, SearchFragment.this, jobModelList, "s"));
+                        new_color_arr, SearchFragment.this, jobModelList, "s"));
 
-                        if (jobModelList.size() > 0) {
+                        if (jobModelList.size() > 0)
+                        {
                             txt_no_job.setVisibility(View.GONE);
                             recycler_view_search.setVisibility(View.VISIBLE);
                             edt_Search.setVisibility(View.VISIBLE);
-
-                        } else {
+                        }
+                        else
+                        {
                             recycler_view_search.setVisibility(View.GONE);
                             edt_Search.setVisibility(View.GONE);
                             txt_no_job.setVisibility(View.VISIBLE);
                         }
-
                         MyApplication.getInstance().hideProgress(getActivity());
-                    } else {
-                        MyApplication.getInstance().displayMessageNew(((Activity) getContext()).findViewById(android.R.id.content), generalResponse.getMessage(), getActivity());
+                    }
+                    else
+                    {
+                        MyApplication.getInstance().displayMessageNew(((Activity) getContext()).findViewById(android.R.id.content),
+                                generalResponse.getMessage(), getActivity());
                     }
                 }
                 catch (Exception e)
@@ -281,7 +298,8 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
             }
 
             @Override
-            public void onError(Throwable e) {
+            public void onError(Throwable e)
+            {
                 MyApplication.showToast(getActivity(), e.getMessage());
                 Log.i("Data_Loading_Error", e.toString());
                 MyApplication.getInstance().hideProgress(getActivity());
@@ -294,7 +312,8 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
         });
     }
 
-    public void openUserDetail(int position){
+    public void openUserDetail(int position)
+    {
         DialogFragment fragment = ViewPersonDetailFragment.newInstance(position, "s");
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragment.show(fragmentManager, fragment.getClass().getSimpleName());
@@ -346,15 +365,24 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
                         if(jobModelList.size() != 0){
                             jobModelList.clear();
                         }
+
+
+                        JSONObject jsonObject=new JSONObject( String.valueOf(generalResponse.response));
+                        Log.e("jsonObject....",jsonObject.toString());
+
+
                         jobModelList = generalResponse.getDataAsList("result", JobModel.class);
 
                         List<Integer> myin=new ArrayList<>();
 
                         int count = 0;
 
-                        for(int i = 0; i < jobModelList.size(); i++){
-                            if(jobModelList.size() > arra.length) {
-                                if (count == arra.length) {
+                        for(int i = 0; i < jobModelList.size(); i++)
+                        {
+                            if(jobModelList.size() > arra.length)
+                            {
+                                if (count == arra.length)
+                                {
                                     count = 0;
                                 }
                             }

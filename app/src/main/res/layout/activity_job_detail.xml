@@ -91,7 +91,7 @@
             <com.helper.Helper2Go.custom.CustomTextViewRegular
                 android:id="@+id/txt_long_des"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_170sdp"
                 android:layout_below="@+id/txt_duration"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:padding="@dimen/_8sdp"

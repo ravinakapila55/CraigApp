@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,15 +22,12 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.helper.Helper2Go.ApiUtils.Injector;
 import com.helper.Helper2Go.R;
 import com.helper.Helper2Go.adapter.SkillAdapter;
 import com.helper.Helper2Go.models.JobModel;
 import com.helper.Helper2Go.ui.ApplyAsHelperActivity;
 import com.helper.Helper2Go.utils.CommonMethods;
-import com.helper.Helper2Go.utils.MyApplication;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -141,8 +138,16 @@ public class ViewPersonDetailFragment extends DialogFragment {
 
         try
         {
+            Log.e("GetSkills ",jobModelList.get(position).getSkills_required());
+
+            String skills="";
+            skills=jobModelList.get(position).getSkills_required();
+
+            Log.e("SkillsFormat ", String.valueOf(Html.fromHtml(skills)));
+
             JSONArray jsonArraySkills = new JSONArray(jobModelList.get(position).getSkills_required());
             Log.e("SkilssArrayLength ",jsonArraySkills.length()+"");
+
             for(int i = 0; i < jsonArraySkills.length(); i++)
             {
                 checkBoxListForSkills.add(jsonArraySkills.getString(i));
@@ -150,6 +155,7 @@ public class ViewPersonDetailFragment extends DialogFragment {
 
             JSONArray jsonArrayTools = new JSONArray(jobModelList.get(position).getTools_needed());
             Log.e("toolsArrayLength ",jsonArrayTools.length()+"");
+
             for(int i = 0; i < jsonArrayTools.length(); i++)
             {
                 checkBoxListForTools.add(jsonArrayTools.getString(i));
@@ -225,7 +231,8 @@ public class ViewPersonDetailFragment extends DialogFragment {
         tvBudget.setText("Budget:"+jobModelList.get(position).getCost());
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.placeholder(R.drawable.user_img);
-        Glide.with(getContext()).setDefaultRequestOptions(requestOptions).load(Injector.JOB_IMAGE_URL + jobModelList.get(position).getImage()).into(img_profile);
+        Glide.with(getContext()).setDefaultRequestOptions(requestOptions).load(Injector.JOB_IMAGE_URL +
+                jobModelList.get(position).getImage()).into(img_profile);
 
         return mRootView;
     }

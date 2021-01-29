@@ -2,6 +2,9 @@ package com.helper.Helper2Go.models;
 
 import androidx.annotation.Keep;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Keep
 public class JobModel {
     int id;
@@ -50,19 +53,23 @@ public class JobModel {
         return short_desc;
     }
 
-    public void setShort_desc(String short_desc) {
+    public void setShort_desc(String short_desc)
+    {
         this.short_desc = short_desc;
     }
 
-    public String getLong_desc() {
+    public String getLong_desc()
+    {
         return long_desc;
     }
 
-    public void setLong_desc(String long_desc) {
+    public void setLong_desc(String long_desc)
+    {
         this.long_desc = long_desc;
     }
 
-    public String getImage() {
+    public String getImage()
+    {
         return image;
     }
 
