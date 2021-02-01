@@ -58,15 +58,11 @@ public class ViewPersonDetailFragment extends DialogFragment {
     @BindView(R.id.txt_long_des)
     TextView txt_long_des;
 
-
-
-
    @BindView(R.id.tvExperienceLabel)
-    TextView tvExperienceLabel;
-
+   TextView tvExperienceLabel;
 
    @BindView(R.id.tvToolsLbel)
-    TextView tvToolsLbel;
+   TextView tvToolsLbel;
 
    @BindView(R.id.tvBudget)
     TextView tvBudget;

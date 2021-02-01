@@ -19,7 +19,8 @@ public class PlaceApi
     private static final String TYPE_AUTOCOMPLETE = "/autocomplete";
     private static final String OUT_JSON = "/json";
 //    private static final String API_KEY = "AIzaSyCxj7Z3cWeV8phaVuua1cSQ88bWT_ls5u0";
-    private static final String API_KEY = "AIzaSyBqnNVt17Rxoh12iw83l69DSGBaHYXD2L4";
+//    private static final String API_KEY = "AIzaSyBqnNVt17Rxoh12iw83l69DSGBaHYXD2L4";
+    private static final String API_KEY = "AIzaSyB0K1Nkr75DR5KZsl0XYGacLx3UNrdtahE";
 
     public ArrayList<String> autocomplete (String input)
     {

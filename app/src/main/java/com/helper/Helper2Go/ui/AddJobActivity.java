@@ -100,8 +100,6 @@ public class AddJobActivity extends ImagePicker
     @BindView(R.id.edt_category)
     TextView edt_category;
 
-    @BindView(R.id.recycler_view_skills)
-    RecyclerView recycler_view_skills;
 
     @BindView(R.id.recycler_view_tools)
     RecyclerView recycler_view_tools;
@@ -173,6 +171,7 @@ public class AddJobActivity extends ImagePicker
         {
             txt_title.setText(intent.getStringExtra("message"));
             job_id = intent.getStringExtra("job_id");
+            Log.e("JobIdAdd ",job_id);
             from = intent.getStringExtra("from");
             if (!job_id.equalsIgnoreCase(""))
             {
@@ -259,14 +258,18 @@ public class AddJobActivity extends ImagePicker
                 ("Bearer " + MyApplication.getInstance().useString("user_access_token"))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
-        observeApi.subscribe(new Observer<Response<ResponseBody>>() {
+
+        observeApi.subscribe(new Observer<Response<ResponseBody>>()
+        {
             @Override
-            public void onSubscribe(Disposable d) {
+            public void onSubscribe(Disposable d)
+            {
 
             }
 
             @Override
-            public void onNext(Response<ResponseBody> response) {
+            public void onNext(Response<ResponseBody> response)
+            {
 
                 Log.e("Data_Loading_Error", String.valueOf(response));
                 GeneralResponse generalResponse = new GeneralResponse(response);
@@ -424,17 +427,20 @@ public class AddJobActivity extends ImagePicker
             }
 
             @Override
-            public void onError(Throwable e) {
+            public void onError(Throwable e)
+            {
                 MyApplication.showToast(AddJobActivity.this, e.getMessage());
                 Log.i("Data_Loading_Error", e.toString());
                 MyApplication.getInstance().hideProgress(AddJobActivity.this);
             }
 
             @Override
-            public void onComplete() {
+            public void onComplete()
+            {
                 MyApplication.getInstance().hideProgress(AddJobActivity.this);
             }
         });
+
     }
 
     @OnClick(R.id.iv_back)
@@ -456,8 +462,14 @@ public class AddJobActivity extends ImagePicker
   /*              final String url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" +
                         placeId + "&key=AIzaSyCxj7Z3cWeV8phaVuua1cSQ88bWT_ls5u0";*/
 
+           /*     final String url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" +
+                        placeId + "&key=AIzaSyBqnNVt17Rxoh12iw83l69DSGBaHYXD2L4"; */
+
+            /*    final String url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" +
+                        placeId + "&key=AIzaSyAxHrKIhC_loGIm0qaVyZMHU6tIo8gkYSY"; */
+
                 final String url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" +
-                        placeId + "&key=AIzaSyBqnNVt17Rxoh12iw83l69DSGBaHYXD2L4";
+                        placeId + "&key=AIzaSyB0K1Nkr75DR5KZsl0XYGacLx3UNrdtahE";
 
 
 //                constant.hideKeyboard(EnterPickUp.this,view);
@@ -470,12 +482,14 @@ public class AddJobActivity extends ImagePicker
                     }
 
                     @Override
-                    protected String doInBackground(final Void... params) {
-                        try {
+                    protected String doInBackground(final Void... params)
+                    {
+                        try
+                        {
                             serviceArrive(url, autoCompleteTextView);
-
-
-                        } catch (Exception e) {
+                        }
+                        catch (Exception e)
+                        {
                             e.printStackTrace();
                         }
                         return null;
