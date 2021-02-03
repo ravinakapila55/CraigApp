@@ -80,6 +80,7 @@
         android:layout_height="@dimen/_40sdp"
         android:src="@drawable/fab_home"
         android:elevation="@dimen/_4sdp"
+        android:visibility="gone"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="@dimen/_25sdp"

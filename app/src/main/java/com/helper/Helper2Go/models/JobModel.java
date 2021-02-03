@@ -2,8 +2,6 @@ package com.helper.Helper2Go.models;
 
 import androidx.annotation.Keep;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Keep
 public class JobModel {

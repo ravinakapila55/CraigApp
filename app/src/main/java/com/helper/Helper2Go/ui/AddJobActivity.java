@@ -100,7 +100,6 @@ public class AddJobActivity extends ImagePicker
     @BindView(R.id.edt_category)
     TextView edt_category;
 
-
     @BindView(R.id.recycler_view_tools)
     RecyclerView recycler_view_tools;
 

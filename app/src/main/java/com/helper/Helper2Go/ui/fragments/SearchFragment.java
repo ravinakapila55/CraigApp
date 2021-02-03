@@ -13,14 +13,11 @@ import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -37,7 +34,6 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 import retrofit2.Response;
-
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,15 +42,12 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.helper.Helper2Go.ApiUtils.Injector;
 import com.helper.Helper2Go.ApiUtils.TinderAppInterface;
 import com.helper.Helper2Go.R;
@@ -91,22 +84,22 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
         com.google.android.gms.location.LocationListener{
 
 
-    LocationRequest mLocationRequest;
-    private long UPDATE_INTERVAL = 2 * 1000;  /* 10 secs */
-    private long FASTEST_INTERVAL = 20000; /* 20 sec */
+   LocationRequest mLocationRequest;
+   private long UPDATE_INTERVAL = 2 * 1000;  /* 10 secs */
+   private long FASTEST_INTERVAL = 20000; /* 20 sec */
 
-    GoogleApiClient mGoogleApiClient;
-    LocationManager mLocationManager;
+   GoogleApiClient mGoogleApiClient;
+   LocationManager mLocationManager;
 
-    Location mLocation;
+   Location mLocation;
 
-    boolean isFirst = false;
+   boolean isFirst = false;
 
-    @BindView(R.id.txt_no_job)
-    TextView txt_no_job;
+   @BindView(R.id.txt_no_job)
+   TextView txt_no_job;
 
-    @BindView(R.id.fab_but_home)
-            ImageView fab_but_home;
+   @BindView(R.id.fab_but_home)
+   ImageView fab_but_home;
 
     int[] arra = {
             Color.rgb(41, 155, 92), Color.rgb(41, 155, 92),
@@ -169,7 +162,8 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
                 } else {
                     edt_Search.clearFocus();
                     HomeMainActivity.navigation.setVisibility(View.VISIBLE);
-                    fab_but_home.setVisibility(View.VISIBLE);
+//                    fab_but_home.setVisibility(View.VISIBLE);
+                    fab_but_home.setVisibility(View.GONE);
                     //Toast.makeText(getContext(), "keyboard closed", Toast.LENGTH_LONG).show();
                 }
             }

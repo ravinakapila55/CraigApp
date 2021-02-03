@@ -3,7 +3,6 @@ package com.helper.Helper2Go.google_place_search;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -47,14 +46,17 @@ public class PlaceApi
                 jsonResults.append(buff, 0, read);
             }
         }
+
         catch (MalformedURLException e)
         {
             return resultList;
         }
+
         catch (IOException e)
         {
             return resultList;
         }
+
         finally
         {
             if (conn != null)
@@ -62,20 +64,24 @@ public class PlaceApi
                 conn.disconnect();
             }
         }
+
         try
         {
             JSONObject jsonObj = new JSONObject(jsonResults.toString());
             JSONArray predsJsonArray = jsonObj.getJSONArray("predictions");
             resultList = new ArrayList<>(predsJsonArray.length());
+
             for (int i = 0; i < predsJsonArray.length(); i++)
             {
                 resultList.add(predsJsonArray.getJSONObject(i).getString("description"));
             }
         }
+
         catch (JSONException e)
         {
             e.printStackTrace();
         }
+
         return resultList;
     }
 }

@@ -12,11 +12,8 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Observable;
@@ -26,7 +23,6 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 import retrofit2.Response;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,11 +38,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.helper.Helper2Go.ApiUtils.Injector;
 import com.helper.Helper2Go.ApiUtils.TinderAppInterface;
 import com.helper.Helper2Go.R;
-import com.helper.Helper2Go.adapter.HomeScreenAdapter;
 import com.helper.Helper2Go.custom.MySpinner;
 import com.helper.Helper2Go.models.JobFilterParam;
 import com.helper.Helper2Go.models.JobModel;
@@ -58,14 +52,9 @@ import com.helper.Helper2Go.utils.GeneralResponse;
 import com.helper.Helper2Go.utils.MyApplication;
 import com.helper.Helper2Go.utils.NetworkUtils;
 import com.google.gson.JsonObject;
-import com.labo.kaji.fragmentanimations.FlipAnimation;
-import com.labo.kaji.fragmentanimations.MoveAnimation;
 import com.tristate.radarview.LatLongCs;
 import com.tristate.radarview.ObjectModel;
 import com.tristate.radarview.RadarViewC;
-
-import org.w3c.dom.Text;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -76,7 +65,8 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class HomeFragmentSecond extends Fragment {
+public class HomeFragmentSecond extends Fragment
+{
    View mRootView;
 
    int distance = 100;
@@ -99,25 +89,29 @@ public class HomeFragmentSecond extends Fragment {
         // Required empty public constructor
     }
 
-    public static HomeFragmentSecond newInstance(String param1, String param2) {
+    public static HomeFragmentSecond newInstance(String param1, String param2)
+    {
         HomeFragmentSecond fragment = new HomeFragmentSecond();
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         mRootView = inflater.inflate(R.layout.fragment_home_fragment_second, container, false);
         tvDistanceSet=(TextView)mRootView.findViewById(R.id.tvDistanceSet);
         ButterKnife.bind(this, mRootView);
 
-        if(mDataSet.size() != 0){
+        if(mDataSet.size() != 0)
+        {
             mDataSet.clear();
         }
 
@@ -198,7 +192,8 @@ public class HomeFragmentSecond extends Fragment {
         return mRootView;
     }
 
-    private void animateRadar() {
+    private void animateRadar()
+    {
         ImageView mImgRadarBack = mRootView.findViewById(R.id.mImgRadarBack);
         Animation rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
         rotation.setFillAfter(true);
@@ -210,17 +205,17 @@ public class HomeFragmentSecond extends Fragment {
         replaceContentFragment(new HomeTutorialFragment());
     }
 
-    private void replaceContentFragment(Fragment fragment) {
+    private void replaceContentFragment(Fragment fragment)
+    {
         if (!isAdded())
             return;
         HomeActivity.flipAnimationFullCardFragment = true;
-
         ((HomeMainActivity) getActivity()).replaceFragmentFromBack(fragment);
-
     }
 
     @OnClick(R.id.iv_notification)
-    public void iv_notification(){
+    public void iv_notification()
+    {
         Intent intent = new Intent(getActivity(), NotificationActivity.class);
         startActivity(intent);
     }
@@ -232,8 +227,8 @@ public class HomeFragmentSecond extends Fragment {
                 .inflate(R.layout.radar_user_item, null);
         ImageView markerImageView = customMarkerView.findViewById(R.id.ivLocation);
         ImageView llLocation = customMarkerView.findViewById(R.id.llLocation);
-
-        DrawableCompat.setTint(llLocation.getDrawable(), Color.parseColor(hexcode)); // set color from hexcode
+        DrawableCompat.setTint(llLocation.getDrawable(), Color.parseColor(hexcode));
+        // set color from hexcode
         //DrawableCompat.setTint(llLocation.getDrawable(), color); // Set color using Color.RED
       /*  byte[] decodedStrings = Base64.decode(geoTagModelList.get(i).getTag_image(), Base64.DEFAULT);
         Bitmap bmp = BitmapFactory.decodeByteArray(decodedStrings, 0, decodedStrings.length);*/

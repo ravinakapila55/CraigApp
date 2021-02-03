@@ -1,7 +1,6 @@
 package com.helper.Helper2Go.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -9,17 +8,12 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.internal.operators.flowable.FlowableElementAt;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 import retrofit2.Response;
-
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,24 +26,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.helper.Helper2Go.ApiUtils.Injector;
 import com.helper.Helper2Go.ApiUtils.TinderAppInterface;
 import com.helper.Helper2Go.R;
-import com.helper.Helper2Go.custom.CustomEditTextRegular;
-import com.helper.Helper2Go.models.JobFilterParam;
-import com.helper.Helper2Go.models.JobModel;
-import com.helper.Helper2Go.ui.fragments.HomeFragment;
 import com.helper.Helper2Go.ui.fragments.ViewPersonDetailFragment;
 import com.helper.Helper2Go.utils.GeneralResponse;
 import com.helper.Helper2Go.utils.MyApplication;
 import com.helper.Helper2Go.utils.NetworkUtils;
 import com.google.gson.JsonObject;
-import com.tristate.radarview.LatLongCs;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ApplyAsHelperActivity extends AppCompatActivity
 {
